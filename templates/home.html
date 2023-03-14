@@ -41,6 +41,7 @@
       }
     </style>
     <body>
+      {% include 'nav.html' %}
       <div>
         <div class="container">
        <h1 class="text-center mt-2 mb-4">{{company_name}} Organization</h1>
@@ -61,17 +62,18 @@
                 <div><b>Salary:</b>{{job['salary']}}</div>
                 </div>
                 <div class="col-3">
-                <button type="button" class="btn btn-outline-primary">Apply</button>
+                <a href= "mailto:kavinm642@gmail.com?subject=Application for {{job['title']}}" type="button" class="btn btn-outline-primary">Apply</a>
               </div>
               </div>
             
             {% endfor %}
           </p>
-      <div style="te<Copyright></Copyright>center;">
+      <div 
       <button class="btn btn-primary">Contact us</button>
         <p class="mb-2">Copyright 2023.Infosys</p>
       </div>
       </div>
+        {% include 'footer.html' %}
     </body>
   </head>
 </html>
